@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import clubLogo from "../assets/Rotaract Logo_EN21_DynamicSize_FontUpdate.png";
+import aagazLogo from "../assets/aagaz logo.png";
 export default function Navbar() {
   const [hidden, setHidden] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
@@ -69,7 +70,7 @@ export default function Navbar() {
           >
             {/* Club Logo */}
             <img
-              src="src/assets/Rotaract Logo_EN21_DynamicSize_FontUpdate.png"
+              src={clubLogo}
               alt="Club Logo"
               className="w-52 h-52 object-contain"
             />
@@ -77,7 +78,7 @@ export default function Navbar() {
             {/* Theme Logo */}
             <div className="border-l border-gray-300">
               <img
-                src="src/assets/aagaz logo.png"
+                src={aagazLogo}
                 alt="Theme Logo"
                 className="w-42 h-20 object-contain"
               />
