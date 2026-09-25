@@ -4,26 +4,22 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import spikeitup from "../assets/spikeitup.jpg";
-import rangeent from "../assets/rangeent.jpg";
-import muskaan from "../assets/muskaan.jpeg";
-
 const Carousel = () => {
   const slides = [
     {
-      title: "Spike It Up",
-      desc: "A charity volleyball tournament organized to raise funds in support of Vadalvaat, an animal welfare organisation.",
-      img: spikeitup,
+      title: "Tree Plantation Drive",
+      desc: "Planted 200 trees across our community parks to encourage sustainability and cleaner surroundings.",
+      img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Rangeen Titliya",
-      desc: "A gullak (piggy bank) painting workshop designed to instil the habit and importance of saving among children.",
-      img: rangeent,
+      title: "Independence Day Celebration",
+      desc: "An inspiring day with local children — singing patriotic songs, raising the flag, and spreading joy.",
+      img: "https://images.unsplash.com/photo-1608889175123-8e1f93f09f0d?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Project Muskaan",
-      desc: "A Friendship Day celebration organized with the children of a school for the deaf, fostering joy and inclusion.",
-      img: muskaan,
+      title: "Fun Family Night",
+      desc: "A night of laughter, games, and stronger bonds between Rotarians and Rotaractors.",
+      img: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80",
     },
   ];
 

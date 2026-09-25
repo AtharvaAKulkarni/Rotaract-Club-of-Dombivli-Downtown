@@ -7,28 +7,33 @@ import installation from "../assets/installation.jpeg";
 import rotaractguru from "../assets/rotaractguru.jpg";
 import azadikerang from "../assets/azadikerang.jpeg";
 import charterday from "../assets/charterday.jpg";
+
 const projects = [
   {
     id: 1,
-    title: "5th Charter Day Celebration",
-    desc: "Celebrated our 5th Charter Day with our members.",
-    img: charterday,
-    category: "community",
+    title: "Blood Donation Camp",
+    desc: "Quarterly blood donation drive in collaboration with local hospitals to support community healthcare needs.",
+    img: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1200&q=60",
+    category: "health",
     status: "completed",
     volunteers: 45,
-    
-    date: "2026-08-23",
+    impact: "150+ units collected",
+    date: "2024-01-15",
     location: "Dombivli East",
 
-    
+    whatHappened:
+      "A blood donation camp was organized in collaboration with local hospitals. Volunteers and community members participated in the drive and donated blood to support patients in need.",
+
+    whyConducted:
+      "The project was conducted to encourage voluntary blood donation and help local hospitals maintain sufficient blood supplies for medical emergencies."
   },
   {
     id: 2,
-    title: "Azadi ke Rang",
-    desc: "A drawing competition at Zilla Parishad school on independence day",
-    img: azadikerang,
-    category: "education",
-    status: "completed",
+    title: "Green Dombivli Initiative",
+    desc: "Tree plantation drive across Dombivli to increase green cover and environmental awareness.",
+    img: "https://images.unsplash.com/photo-1574269862306-1a9c4ba1b5c9?auto=format&fit=crop&w=1200&q=60",
+    category: "environment",
+    status: "ongoing",
     volunteers: 120,
     impact: "500+ trees planted",
     date: "2024-02-01",
@@ -36,11 +41,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Azadi ke Shabd",
-    desc: "A elocution competition at Zilla Parishad school on independence day",
-    img: azadikeshabd,
+    title: "Education for All",
+    desc: "Evening tuition classes for underprivileged children in Dombivli area.",
+    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=60",
     category: "education",
-    status: "completed",
+    status: "ongoing",
     volunteers: 35,
     impact: "80+ students benefited",
     date: "2023-11-10",
@@ -48,11 +53,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "Project Muskaan",
-    desc: "A Friendship Day celebration organized with the children of a school for the deaf, fostering joy and inclusion.",
-    img: muskaan,
+    title: "Senior Citizen Care",
+    desc: "Weekly visits and support for elderly citizens in our community.",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=60",
     category: "community",
-    status: "completed",
+    status: "ongoing",
     volunteers: 25,
     impact: "60+ seniors supported",
     date: "2023-12-05",
@@ -60,22 +65,22 @@ const projects = [
   },
   {
     id: 5,
-    title: "Dear Rotaract Guru",
-    desc: "A letter to Rotaract Guru to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima",
-    img: rotaractguru,
-    category: "community",
-    status: "completed",
+    title: "Clean Dombivli Drive",
+    desc: "Beach and street cleaning initiative to promote cleanliness and civic responsibility.",
+    img: "https://images.unsplash.com/photo-1550147760-44c9966d6bc7?auto=format&fit=crop&w=1200&q=60",
+    category: "environment",
+    status: "upcoming",
     volunteers: 0,
+    impact: "Target: 2 tons waste",
     date: "2024-03-20",
-    location: "Dombivli",
-    whatHappened: "The aim of the project was to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima for their constant guidance, support, and belief throughout the Rotaract journey, while acknowledging their role in inspiring the personal and professional growth of Rotaractors.",
+    location: "Khadakpada Area"
   },
   {
     id: 6,
-    title: "The Royal Soiree",
-    desc: "Organized our 5th installation Ceremony.",
-    img: installation,
-    category: "",
+    title: "Skill Development Workshop",
+    desc: "Free vocational training programs for youth and women empowerment.",
+    img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=60",
+    category: "education",
     status: "completed",
     volunteers: 18,
     impact: "120+ participants",
@@ -269,7 +274,7 @@ export default function Projects() {
                   {selectedProject.title}
                 </h2>
 
-                {/* Date / Location / Volunteers
+                {/* Date / Location / Volunteers */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
 
                   <div className="bg-[#f9f0f4] rounded-xl p-4">
@@ -312,7 +317,7 @@ export default function Projects() {
                     </p>
                   </div>
 
-                </div> */}
+                </div>
 
                 {/* What Happened */}
                 <div className="mb-6">
@@ -325,7 +330,7 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Why Conducted
+                {/* Why Conducted */}
                 <div className="mb-6">
                   <h4 className="text-lg font-bold !text-[#b6316c] mb-2">
                     Why Was It Conducted?
@@ -335,9 +340,9 @@ export default function Projects() {
                     {selectedProject.whyConducted ||
                       "This initiative was conducted to create a positive impact in the community and address an important local need."}
                   </p>
-                </div> */}
+                </div>
 
-                {/* Impact
+                {/* Impact */}
                 <div className="bg-[#f9f0f4] rounded-xl p-5 text-white mb-6">
                   <div className="flex items-center gap-3 mb-2 text-[#b6316c]">
                     <FaHandHoldingHeart />
@@ -349,7 +354,7 @@ export default function Projects() {
                   <p className="text-black">
                     {selectedProject.impact}
                   </p>
-                </div> */}
+                </div>
 
                 {/* Close */}
                 <div className="text-right">
