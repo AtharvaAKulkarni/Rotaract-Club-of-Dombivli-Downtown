@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaSearch, FaFilter, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaHeart, FaShare, FaDownload, FaExpand } from "react-icons/fa";
-// const images=import.meta.glob(
-//   "../assets/Core Team/*.{png,jpg,jpeg,webp}",
-//   {
-//     eager: true,
-//     query: "?url",
-//     import: "default",
-//   }
-// );
+
 const galleryData = [
   {
     id: 1,
-    title: "5th Charter Day Celebration",
-    category: "community",
+    title: "Blood Donation Camp 2024",
+    category: "health",
     date: "2024-01-15",
     location: "Dombivli East",
     images: [
@@ -27,8 +20,8 @@ const galleryData = [
   },
   {
     id: 2,
-    title: "Azadi ke Rang",
-    category: "education",
+    title: "Green Dombivli Tree Plantation",
+    category: "environment",
     date: "2024-02-01",
     location: "Multiple Locations",
     images: [
@@ -41,7 +34,7 @@ const galleryData = [
   },
   {
     id: 3,
-    title: "Azadi ke Shabd",
+    title: "Education Fair for Underprivileged",
     category: "education",
     date: "2024-01-28",
     location: "Dombivli West",
@@ -55,8 +48,8 @@ const galleryData = [
   },
   {
     id: 4,
-    title: "Project Muskaan",
-    category: "community",
+    title: "Clean Dombivli Beach Drive",
+    category: "environment",
     date: "2023-12-10",
     location: "Khadakpada Area",
     images: [
@@ -69,8 +62,8 @@ const galleryData = [
   },
   {
     id: 5,
-    title: "Dear Rotaract Guru",
-    category: "education",
+    title: "Senior Citizen Care Program",
+    category: "community",
     date: "2023-11-20",
     location: "Dombivli",
     images: [
@@ -83,7 +76,7 @@ const galleryData = [
   },
   {
     id: 6,
-    title: "The Royal Soiree",
+    title: "Skill Development Workshop",
     category: "education",
     date: "2023-10-15",
     location: "Dombivli Downtown",
