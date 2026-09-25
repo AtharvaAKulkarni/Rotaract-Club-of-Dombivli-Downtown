@@ -6,6 +6,10 @@ import Carousel from "../components/Carousel";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import yogaday from "../assets/home-what-we-do/yoga-day.jpg";
+import rangeentitliya from "../assets/home-what-we-do/rangeen-titliya.jpeg";
+import bd from "../assets/home-what-we-do/bd.jpeg";
+
 import image1 from "../assets/home-carousel/1.jpeg";
 import image2 from "../assets/home-carousel/2.jpeg";
 import image3 from "../assets/home-carousel/3.JPG";
@@ -290,7 +294,7 @@ const bgImages = [
           {/* Photo 1 */}
           <div className="w-100 h-100">
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80"
+              src={rangeentitliya}
               alt="Community service"
               className="w-100 h-100 object-fit-cover"
             />
@@ -299,7 +303,7 @@ const bgImages = [
           {/* Photo 2 */}
           <div className="w-100 h-100">
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
+              src={yogaday}
               alt="Teamwork"
               className="w-100 h-100 object-fit-cover"
             />
@@ -308,7 +312,7 @@ const bgImages = [
           {/* Photo 3 */}
           <div className="w-100 h-100">
             <img
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+              src={bd}
               alt="Leadership"
               className="w-100 h-100 object-fit-cover"
             />
@@ -583,7 +587,7 @@ const bgImages = [
 
 
       {/* ===== UPCOMING EVENTS ===== */}
-      <section className="py-5 bg-gray-50">
+      {/* <section className="py-5 bg-gray-50">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -642,7 +646,7 @@ const bgImages = [
             </button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* ===== CALL TO ACTION ===== */}
