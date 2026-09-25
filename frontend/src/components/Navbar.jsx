@@ -52,7 +52,7 @@ export default function Navbar() {
     { path: "/about-us", label: "About Us" },
     { path: "/projects", label: "Projects" },
     { path: "/team", label: "Our Team" },
-    { path: "/gallery", label: "Gallery" }
+    // { path: "/gallery", label: "Gallery" }
   ];
 
   return (
