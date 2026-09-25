@@ -6,8 +6,22 @@ import {
   FaEnvelope,
   FaArrowRight,
 } from "react-icons/fa";
-
-
+const images = import.meta.glob(
+  "../assets/Core Team/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }
+);
+const bods = import.meta.glob(
+  "../assets/BOD/*.{png,jpg,jpeg,webp}",
+  {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }
+);
 // ============================================================
 // TEAM DATA
 // ============================================================
@@ -16,7 +30,7 @@ const coreTeam = [
   {
     name: "Rtr. Swayam Telang",
     roles: ["President"],
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/swayam.png"],
     intro:
       "Leading the organization through a year of service, leadership and community engagement.",
     social: {
@@ -28,7 +42,7 @@ const coreTeam = [
   {
     name: "Rtr. Atharva Kulkarni",
     roles: ["Secretary"],
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/atharva.png"],
     intro:
       "Keeping the club organized, connected and moving forward throughout the year.",
     social: {
@@ -40,7 +54,7 @@ const coreTeam = [
   {
     name: "Rtr. Diksha Kadam",
     roles: ["Vice President"],
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/diksha.png"],
     intro:
       "Driving the club's growth while strengthening its presence and connection with the community.",
     social: {
@@ -52,7 +66,7 @@ const coreTeam = [
   {
     name: "Rtr. Shreyansh Jaiswar",
     roles: ["Treasurer"],
-    img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/shreyansh.png"],
     intro:
       "Managing the club's finances and helping turn ideas into impactful initiatives.",
     social: {
@@ -64,7 +78,7 @@ const coreTeam = [
   {
     name: "Rtr. Naman Dhoot",
     roles: ["Seargent at Arms"],
-    img: "src/assets/Core Team/Rtr. Naman.jpg",
+    img: images["../assets/Core Team/naman.png"],
     intro:
       "Supporting club operations while building meaningful partnerships for service.",
     social: {
@@ -76,7 +90,7 @@ const coreTeam = [
   {
     name: "Rtr. Aparna Iyer",
     roles: ["Training Revival and Sustenance"],
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/aparna.png"],
     intro:
       "Helping members learn, grow and stay connected with the spirit of Rotaract.",
     social: {
@@ -88,7 +102,7 @@ const coreTeam = [
   {
     name: "Rtr. Anagha Kulkarni",
     roles: ["Immediate Past President"],
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    img: images["../assets/Core Team/anagha.png"],
     intro:
       "Supporting the new leadership team with experience, guidance and continuity.",
     social: {
@@ -103,7 +117,7 @@ const boardMembers = [
   {
     name: "Rtr. Sanchita Iyer",
     roles: ["Club Service Director"],
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/sanchita.png"],
     intro:
       "Creating engaging experiences and strengthening the club's internal community.",
     social: {
@@ -115,7 +129,7 @@ const boardMembers = [
   {
     name: "Rtr. Adarsh Shinde",
     roles: ["Community Service Director"],
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/adarsh.png"],
     intro:
       "Leading initiatives that turn community needs into meaningful action.",
     social: {
@@ -127,7 +141,7 @@ const boardMembers = [
   {
     name: "Rtr. Kaivalya Kasar",
     roles: ["Career Development Director"],
-    img: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/kaivalya.png"],
     intro:
       "Creating opportunities that help members discover and develop their potential.",
     social: {
@@ -139,7 +153,7 @@ const boardMembers = [
   {
     name: "Rtr. Vedant Pawar",
     roles: ["International Service Director"],
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/vedant.png"],
     intro:
       "Building connections and opportunities that extend beyond our local community.",
     social: {
@@ -151,7 +165,7 @@ const boardMembers = [
   {
     name: "Rtr. Kaushik Vinod",
     roles: ["Sports Director"],
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/kaushik.png"],
     intro:
       "Bringing members together through sports, activities and healthy competition.",
     social: {
@@ -163,7 +177,7 @@ const boardMembers = [
   {
     name: "Rtr. Diksha Kadam",
     roles: ["Partners in Service"],
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/diksha.png"],
     intro:
       "Driving the club's growth while strengthening its presence and connection with the community.",
     social: {
@@ -175,7 +189,7 @@ const boardMembers = [
   {
     name: "Rtr. Shreyansh Jaiswar",
     roles: ["Digicom Director"],
-    img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/shreyansh.png"],
     intro:
       "Managing the club's finances and helping turn ideas into impactful initiatives.",
     social: {
@@ -187,7 +201,7 @@ const boardMembers = [
   {
     name: "Rtr. Naman Dhoot",
     roles: ["Seargent at Arms", "PR and Marketing"],
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=800&q=80",
+    img: bods["../assets/BOD/naman.png"],
     intro:
       "Supporting club operations while building meaningful partnerships for service.",
     social: {
@@ -198,8 +212,8 @@ const boardMembers = [
   },
   {
     name: "Rtr. Anagha Kulkarni",
-    roles: ["Immediate Past President",  "Editor"],
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    roles: ["Immediate Past President", "Editor"],
+    img: bods["../assets/BOD/anagha.png"],
     intro:
       "Supporting the new leadership team with experience, guidance and continuity.",
     social: {
@@ -271,7 +285,7 @@ function BoardCard({ member, index }) {
           <img
             src={member.img}
             alt={member.name}
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-full object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700"
           />
         </div>
 
@@ -335,9 +349,8 @@ function CoreMember({ member, reverse = false, index }) {
       className="group"
     >
       <div
-        className={`flex flex-col ${
-          reverse ? "md:flex-row-reverse" : "md:flex-row"
-        } bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 h-[380px]`}
+        className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"
+          } bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 h-[380px]`}
       >
 
         {/* FIXED IMAGE */}
@@ -394,7 +407,7 @@ export default function Team() {
 
       <section className="relative overflow-hidden bg-[#0f172a] text-white">
 
-        
+
 
 
         <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32">
