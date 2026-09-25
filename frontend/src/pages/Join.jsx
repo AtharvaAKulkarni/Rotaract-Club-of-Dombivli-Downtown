@@ -87,7 +87,7 @@ export default function Join() {
           </p>
 
           <a
-            href="YOUR_GOOGLE_FORM_LINK"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScJ8vRdxwkF0xvQMyLWZt_zjK6cEkH-mO8Y6vQe4VNmvF8O5A/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-lg px-5 py-3 rounded-pill fw-bold text-white d-inline-flex align-items-center"
@@ -557,7 +557,7 @@ export default function Join() {
             </p>
 
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScJ8vRdxwkF0xvQMyLWZt_zjK6cEkH-mO8Y6vQe4VNmvF8O5A/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-lg px-5 py-3 rounded-pill fw-bold d-inline-flex align-items-center"
@@ -638,7 +638,7 @@ export default function Join() {
                     href="mailto:yourorganization@gmail.com"
                     className="text-black text-decoration-none"
                   >
-                    yourorganization@gmail.com
+                    dombivlidowntownrc@gmail.com
                   </a>
 
                 </div>
@@ -647,7 +647,7 @@ export default function Join() {
 
 
               {/* PHONE */}
-              <div className="d-flex gap-3 mb-4">
+              {/* <div className="d-flex gap-3 mb-4">
 
                 <FaPhone
                   className="mt-1"
@@ -670,7 +670,7 @@ export default function Join() {
 
                 </div>
 
-              </div>
+              </div> */}
 
 
               {/* LOCATION */}
@@ -708,14 +708,12 @@ export default function Join() {
                   {
                     icon: FaInstagram,
                     label: "Instagram",
-                  },
-                  {
-                    icon: FaFacebookF,
-                    label: "Facebook",
+                    link: "https://www.instagram.com/rotaract_downtown/"
                   },
                   {
                     icon: FaLinkedinIn,
                     label: "LinkedIn",
+                    link: "https://www.linkedin.com/in/rotaractdombivlidowntown/"
                   },
                 ].map((social, index) => {
                   const Icon = social.icon;
@@ -723,7 +721,7 @@ export default function Join() {
                   return (
                     <a
                       key={index}
-                      href="#"
+                      href={social.link}
                       aria-label={social.label}
                       className="d-flex align-items-center justify-content-center rounded-circle text-black"
                       style={{
