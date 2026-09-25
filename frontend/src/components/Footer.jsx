@@ -34,7 +34,7 @@ export default function Footer() {
                         {/* Social Media */}
                         <div className="d-flex gap-3">
                             <a
-                                href="#"
+                                href="https://www.instagram.com/rotaract_downtown/"
                                 className="!text-gray-600 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
                                 style={{ width: "40px", height: "40px" }}
                                 aria-label="Instagram"
@@ -42,17 +42,17 @@ export default function Footer() {
                                 <FaInstagram />
                             </a>
 
-                            <a
+                            {/* <a
                                 href="#"
                                 className="!text-gray-600 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
                                 style={{ width: "40px", height: "40px" }}
                                 aria-label="Facebook"
                             >
                                 <FaFacebookF />
-                            </a>
+                            </a> */}
 
                             <a
-                                href="#"
+                                href="https://www.linkedin.com/in/rotaractdombivlidowntown/"
                                 className="!text-gray-600 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
                                 style={{ width: "40px", height: "40px" }}
                                 aria-label="LinkedIn"
@@ -60,14 +60,14 @@ export default function Footer() {
                                 <FaLinkedinIn />
                             </a>
 
-                            <a
+                            {/* <a
                                 href="#"
                                 className="!text-gray-600 d-flex align-items-center justify-content-center rounded-circle border border-secondary"
                                 style={{ width: "40px", height: "40px" }}
                                 aria-label="YouTube"
                             >
                                 <FaYoutube />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
 

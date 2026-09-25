@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaTree, FaBook, FaHeart, FaSearch, FaCalendar, FaMapMarkerAlt, FaHandHoldingHeart } from "react-icons/fa";
+import azadikeshabd from "../assets/azadikeshabd.jpg";
+import muskaan from "../assets/muskaan.jpeg";
+import installation from "../assets/installation.jpeg";
+import rotaractguru from "../assets/rotaractguru.jpg";
+import azadikerang from "../assets/azadikerang.jpeg";
+import charterday from "../assets/charterday.jpg";
 
 const projects = [
   {
