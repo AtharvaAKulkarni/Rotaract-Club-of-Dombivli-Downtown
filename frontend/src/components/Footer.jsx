@@ -135,7 +135,7 @@ export default function Footer() {
                             </a>
                         </div>
 
-                        {/* <div className="d-flex align-items-center gap-3">
+                        <div className="d-flex align-items-center gap-3">
                             <FaPhone className="!text-gray-600" />
                             <a
                                 href="tel:+910000000000"
@@ -143,7 +143,7 @@ export default function Footer() {
                             >
                                 +91 XXXXX XXXXX
                             </a>
-                        </div> */}
+                        </div>
                     </div>
 
                     {/* Join Us */}
