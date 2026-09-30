@@ -85,6 +85,7 @@ export default function Navbar() {
             </div>
           </Link>
 
+
           {/* ================= DESKTOP NAV ================= */}
           <nav className="hidden lg:flex items-center gap-6">
 
@@ -93,23 +94,13 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `relative py-2 text-sm font-medium !text-black transition-colors duration-200 ${isActive
-                    ? "text-[#b6316c]"
-                    : "text-gray-700 hover:text-[#b6316c]"
+                  `py-2 text-sm font-medium transition-colors duration-200 ![text-decoration:none] ${isActive
+                    ? "!text-[#b6316c]"
+                    : "!text-gray-700 hover:!text-[#b6316c]"
                   }`
                 }
               >
-                {({ isActive }) => (
-                  <>
-                    {item.label}
-
-                    {/* Active underline */}
-                    <span
-                      className={`absolute left-0 bottom-0 h-[2px] bg-[#b6316c] transition-all duration-300 ${isActive ? "w-full" : "w-0"
-                        }`}
-                    />
-                  </>
-                )}
+                {item.label}
               </NavLink>
             ))}
 
@@ -120,23 +111,15 @@ export default function Navbar() {
             <NavLink
               to="/join"
               className={({ isActive }) =>
-                `relative py-2 text-sm font-semibold transition-colors duration-200 ${isActive
-                  ? "text-[#b6316c]"
-                  : "text-gray-800 hover:text-[#b6316c]"
+                `py-2 text-sm font-semibold transition-colors duration-200 ![text-decoration:none] ${isActive
+                  ? "!text-[#b6316c]"
+                  : "!text-gray-800 hover:!text-[#b6316c]"
                 }`
               }
             >
-              {({ isActive }) => (
-                <>
-                  Join Us
-
-                  <span
-                    className={`absolute left-0 bottom-0 h-[2px] bg-[#b6316c] transition-all duration-300 ${isActive ? "w-full" : "w-0"
-                      }`}
-                  />
-                </>
-              )}
+              Join Us
             </NavLink>
+
           </nav>
 
           {/* ================= MOBILE MENU BUTTON ================= */}
@@ -192,44 +175,36 @@ function MobileMenu({ currentPath, navItems }) {
 
       {/* ================= MOBILE OVERLAY ================= */}
       {open && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-          />
+        <div className="fixed inset-0 z-50 lg:hidden bg-white">
 
           {/* Menu */}
           <div className="absolute right-0 top-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl">
 
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col h-full bg-white">
 
               {/* Header */}
-              <div className="flex items-center justify-between p-5 border-b border-gray-200">
+              <div className="flex items-center justify-between p-5 border-b border-gray-200 bg-white">
 
-                {/* Logos */}
                 <Link
                   to="/"
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-3"
                 >
                   <img
-                    src="/club-logo.png"
+                    src={clubLogo}
                     alt="Club Logo"
                     className="w-11 h-11 object-contain"
                   />
 
                   <div className="border-l border-gray-300 pl-3">
                     <img
-                      src="/theme-logo.png"
+                      src={aagazLogo}
                       alt="Theme Logo"
                       className="w-11 h-11 object-contain"
                     />
                   </div>
                 </Link>
 
-                {/* Close */}
                 <button
                   onClick={() => setOpen(false)}
                   className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -239,10 +214,8 @@ function MobileMenu({ currentPath, navItems }) {
 
               </div>
 
-
-              {/* ================= MENU ITEMS ================= */}
-              <nav className="flex-1 p-5">
-
+              {/* Menu Items */}
+              <nav className="flex-1 p-5 bg-white">
                 <div className="flex flex-col">
 
                   {navItems.map((item) => (
@@ -257,14 +230,12 @@ function MobileMenu({ currentPath, navItems }) {
                     >
                       {item.label}
 
-                      {/* Active underline */}
                       {currentPath === item.path && (
                         <span className="absolute left-0 bottom-0 w-10 h-[2px] bg-[#b6316c]" />
                       )}
                     </Link>
                   ))}
 
-                  {/* Join Us */}
                   <Link
                     to="/join"
                     onClick={() => setOpen(false)}
@@ -281,7 +252,6 @@ function MobileMenu({ currentPath, navItems }) {
                   </Link>
 
                 </div>
-
               </nav>
 
             </div>
