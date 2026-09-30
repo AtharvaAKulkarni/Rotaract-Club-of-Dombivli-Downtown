@@ -350,7 +350,7 @@ function CoreMember({ member, reverse = false, index }) {
     >
       <div
         className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"
-          } bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 h-[380px]`}
+          } bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[380px] md:h-[380px]`}
       >
 
         {/* FIXED IMAGE */}
@@ -365,7 +365,7 @@ function CoreMember({ member, reverse = false, index }) {
         {/* FIXED CONTENT */}
         <div className="flex-1 p-8 md:p-10 flex flex-col justify-center overflow-hidden">
 
-          <p className="text-sm font-bold tracking-widest text-[#b6316c] uppercase mb-3">
+          <p className="text-sm md:text-base font-bold tracking-wide md:tracking-widest text-[#b6316c] uppercase mb-3 break-words">
             {member.roles.join(" • ")}
           </p>
 

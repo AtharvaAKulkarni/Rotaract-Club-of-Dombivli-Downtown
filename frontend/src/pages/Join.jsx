@@ -43,7 +43,7 @@ export default function Join() {
   }
 
   return (
-    <div className="bg-white text-dark">
+    <div className="bg-white text-dark pt-20">
 
       {/* ================================================= */}
       {/* HERO */}
