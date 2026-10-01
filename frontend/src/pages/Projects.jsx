@@ -1,89 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaTree, FaBook, FaHeart, FaSearch, FaCalendar, FaMapMarkerAlt, FaHandHoldingHeart } from "react-icons/fa";
-import azadikeshabd from "../assets/azadikeshabd.jpg";
-import muskaan from "../assets/muskaan.jpeg";
-import installation from "../assets/installation.jpeg";
-import rotaractguru from "../assets/rotaractguru.jpg";
-import azadikerang from "../assets/azadikerang.jpeg";
-import charterday from "../assets/charterday.jpg";
-
-const projects = [
-  {
-    id: 1,
-    title: "5th Charter Day Celebration",
-    desc: "Celebrated our 5th Charter Day with our members.",
-    img: charterday,
-    category: "community",
-    status: "completed",
-    volunteers: 45,
-    
-    date: "2026-08-23",
-    location: "Dombivli East",
-
-    
-  },
-  {
-    id: 2,
-    title: "Azadi ke Rang",
-    desc: "A drawing competition at Zilla Parishad school on independence day",
-    img: azadikerang,
-    category: "education",
-    status: "completed",
-    volunteers: 120,
-    impact: "500+ trees planted",
-    date: "2024-02-01",
-    location: "Multiple Locations"
-  },
-  {
-    id: 3,
-    title: "Azadi ke Shabd",
-    desc: "A elocution competition at Zilla Parishad school on independence day",
-    img: azadikeshabd,
-    category: "education",
-    status: "completed",
-    volunteers: 35,
-    impact: "80+ students benefited",
-    date: "2023-11-10",
-    location: "Dombivli West"
-  },
-  {
-    id: 4,
-    title: "Project Muskaan",
-    desc: "A Friendship Day celebration organized with the children of a school for the deaf, fostering joy and inclusion.",
-    img: muskaan,
-    category: "community",
-    status: "completed",
-    volunteers: 25,
-    impact: "60+ seniors supported",
-    date: "2023-12-05",
-    location: "Dombivli"
-  },
-  {
-    id: 5,
-    title: "Dear Rotaract Guru",
-    desc: "A letter to Rotaract Guru to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima",
-    img: rotaractguru,
-    category: "community",
-    status: "completed",
-    volunteers: 0,
-    date: "2024-03-20",
-    location: "Dombivli",
-    whatHappened: "The aim of the project was to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima for their constant guidance, support, and belief throughout the Rotaract journey, while acknowledging their role in inspiring the personal and professional growth of Rotaractors.",
-  },
-  {
-    id: 6,
-    title: "The Royal Soiree",
-    desc: "Organized our 5th installation Ceremony.",
-    img: installation,
-    category: "",
-    status: "completed",
-    volunteers: 18,
-    impact: "120+ participants",
-    date: "2023-10-25",
-    location: "Dombivli Downtown"
-  }
-];
 
 const categories = [
   { id: "all", name: "All Projects", icon: FaHandHoldingHeart },
@@ -100,9 +17,25 @@ const statusColors = {
 };
 
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
+
+  React.useEffect(() => {
+    fetch('/api/projects')
+      .then(res => res.json())
+      .then(data => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to fetch projects:", err);
+        setLoading(false);
+      });
+  }, []);
+
   const filteredProjects = projects.filter(project => {
     const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

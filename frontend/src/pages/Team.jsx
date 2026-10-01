@@ -6,225 +6,6 @@ import {
   FaEnvelope,
   FaArrowRight,
 } from "react-icons/fa";
-const images = import.meta.glob(
-  "../assets/Core Team/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }
-);
-const bods = import.meta.glob(
-  "../assets/BOD/*.{png,jpg,jpeg,webp}",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }
-);
-// ============================================================
-// TEAM DATA
-// ============================================================
-
-const coreTeam = [
-  {
-    name: "Rtr. Swayam Telang",
-    roles: ["President"],
-    img: images["../assets/Core Team/swayam.png"],
-    intro:
-      "Leading the organization through a year of service, leadership and community engagement.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Atharva Kulkarni",
-    roles: ["Secretary"],
-    img: images["../assets/Core Team/atharva.png"],
-    intro:
-      "Keeping the club organized, connected and moving forward throughout the year.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Diksha Kadam",
-    roles: ["Vice President"],
-    img: images["../assets/Core Team/diksha.png"],
-    intro:
-      "Driving the club's growth while strengthening its presence and connection with the community.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Shreyansh Jaiswar",
-    roles: ["Treasurer"],
-    img: images["../assets/Core Team/shreyansh.png"],
-    intro:
-      "Managing the club's finances and helping turn ideas into impactful initiatives.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Naman Dhoot",
-    roles: ["Seargent at Arms"],
-    img: images["../assets/Core Team/naman.png"],
-    intro:
-      "Supporting club operations while building meaningful partnerships for service.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Aparna Iyer",
-    roles: ["Training Revival and Sustenance"],
-    img: images["../assets/Core Team/aparna.png"],
-    intro:
-      "Helping members learn, grow and stay connected with the spirit of Rotaract.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Anagha Kulkarni",
-    roles: ["Immediate Past President"],
-    img: images["../assets/Core Team/anagha.png"],
-    intro:
-      "Supporting the new leadership team with experience, guidance and continuity.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-];
-
-const boardMembers = [
-  {
-    name: "Rtr. Sanchita Iyer",
-    roles: ["Club Service Director"],
-    img: bods["../assets/BOD/sanchita.png"],
-    intro:
-      "Creating engaging experiences and strengthening the club's internal community.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Adarsh Shinde",
-    roles: ["Community Service Director"],
-    img: bods["../assets/BOD/adarsh.png"],
-    intro:
-      "Leading initiatives that turn community needs into meaningful action.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Kaivalya Kasar",
-    roles: ["Career Development Director"],
-    img: bods["../assets/BOD/kaivalya.png"],
-    intro:
-      "Creating opportunities that help members discover and develop their potential.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Vedant Pawar",
-    roles: ["International Service Director"],
-    img: bods["../assets/BOD/vedant.png"],
-    intro:
-      "Building connections and opportunities that extend beyond our local community.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Kaushik Vinod",
-    roles: ["Sports Director"],
-    img: bods["../assets/BOD/kaushik.png"],
-    intro:
-      "Bringing members together through sports, activities and healthy competition.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Diksha Kadam",
-    roles: ["Partners in Service"],
-    img: bods["../assets/BOD/diksha.png"],
-    intro:
-      "Driving the club's growth while strengthening its presence and connection with the community.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    }
-  },
-  {
-    name: "Rtr. Shreyansh Jaiswar",
-    roles: ["Digicom Director"],
-    img: bods["../assets/BOD/shreyansh.png"],
-    intro:
-      "Managing the club's finances and helping turn ideas into impactful initiatives.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Naman Dhoot",
-    roles: ["Seargent at Arms", "PR and Marketing"],
-    img: bods["../assets/BOD/naman.png"],
-    intro:
-      "Supporting club operations while building meaningful partnerships for service.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-  {
-    name: "Rtr. Anagha Kulkarni",
-    roles: ["Immediate Past President", "Editor"],
-    img: bods["../assets/BOD/anagha.png"],
-    intro:
-      "Supporting the new leadership team with experience, guidance and continuity.",
-    social: {
-      linkedin: "#",
-      instagram: "#",
-      email: "mailto:example@gmail.com",
-    },
-  },
-];
-
-
 // ============================================================
 // SOCIAL ICONS
 // ============================================================
@@ -392,9 +173,29 @@ function CoreMember({ member, reverse = false, index }) {
 
 export default function Team() {
 
-  const president = coreTeam[0];
+  const [teamData, setTeamData] = React.useState({ core: [], board: [] });
+  const [loading, setLoading] = React.useState(true);
 
-  const remainingCore = coreTeam.slice(1);
+  React.useEffect(() => {
+    fetch('/api/team')
+      .then(res => res.json())
+      .then(data => {
+        setTeamData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to fetch team:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="min-h-screen bg-[#f8fafc] pt-20 flex justify-center items-center font-bold text-xl text-[#b6316c]">Loading...</div>;
+  }
+
+  const president = teamData.core.length > 0 ? teamData.core[0] : null;
+  const remainingCore = teamData.core.slice(1);
+  const boardMembers = teamData.board;
 
   return (
 

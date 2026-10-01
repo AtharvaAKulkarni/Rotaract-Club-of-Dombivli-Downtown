@@ -1,0 +1,279 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const data = {
+  projects: [
+    {
+      id: 1,
+      title: "5th Charter Day Celebration",
+      desc: "Celebrated our 5th Charter Day with our members.",
+      img: "/assets/projects/charterday.jpg",
+      category: "community",
+      status: "completed",
+      volunteers: 45,
+      date: "2026-08-23",
+      location: "Dombivli East",
+      order: 1
+    },
+    {
+      id: 2,
+      title: "Azadi ke Rang",
+      desc: "A drawing competition at Zilla Parishad school on independence day",
+      img: "/assets/projects/azadikerang.jpeg",
+      category: "education",
+      status: "completed",
+      volunteers: 120,
+      impact: "500+ trees planted",
+      date: "2024-02-01",
+      location: "Multiple Locations",
+      order: 2
+    },
+    {
+      id: 3,
+      title: "Azadi ke Shabd",
+      desc: "A elocution competition at Zilla Parishad school on independence day",
+      img: "/assets/projects/azadikeshabd.jpg",
+      category: "education",
+      status: "completed",
+      volunteers: 35,
+      impact: "80+ students benefited",
+      date: "2023-11-10",
+      location: "Dombivli West",
+      order: 3
+    },
+    {
+      id: 4,
+      title: "Project Muskaan",
+      desc: "A Friendship Day celebration organized with the children of a school for the deaf, fostering joy and inclusion.",
+      img: "/assets/projects/muskaan.jpeg",
+      category: "community",
+      status: "completed",
+      volunteers: 25,
+      impact: "60+ seniors supported",
+      date: "2023-12-05",
+      location: "Dombivli",
+      order: 4
+    },
+    {
+      id: 5,
+      title: "Dear Rotaract Guru",
+      desc: "A letter to Rotaract Guru to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima",
+      img: "/assets/projects/rotaractguru.jpg",
+      category: "community",
+      status: "completed",
+      volunteers: 0,
+      date: "2024-03-20",
+      location: "Dombivli",
+      whatHappened: "The aim of the project was to express heartfelt gratitude to Rotaract Gurus on the occasion of Guru Purnima for their constant guidance, support, and belief throughout the Rotaract journey, while acknowledging their role in inspiring the personal and professional growth of Rotaractors.",
+      order: 5
+    },
+    {
+      id: 6,
+      title: "The Royal Soiree",
+      desc: "Organized our 5th installation Ceremony.",
+      img: "/assets/projects/installation.jpeg",
+      category: "",
+      status: "completed",
+      volunteers: 18,
+      impact: "120+ participants",
+      date: "2023-10-25",
+      location: "Dombivli Downtown",
+      order: 6
+    }
+  ],
+  team: {
+    core: [
+      {
+        id: "c1",
+        name: "Rtr. Swayam Telang",
+        roles: ["President"],
+        img: "/assets/team/core/swayam.png",
+        intro: "Leading the organization through a year of service, leadership and community engagement.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 1
+      },
+      {
+        id: "c2",
+        name: "Rtr. Atharva Kulkarni",
+        roles: ["Secretary"],
+        img: "/assets/team/core/atharva.png",
+        intro: "Keeping the club organized, connected and moving forward throughout the year.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 2
+      },
+      {
+        id: "c3",
+        name: "Rtr. Diksha Kadam",
+        roles: ["Vice President"],
+        img: "/assets/team/core/diksha.png",
+        intro: "Driving the club's growth while strengthening its presence and connection with the community.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 3
+      },
+      {
+        id: "c4",
+        name: "Rtr. Shreyansh Jaiswar",
+        roles: ["Treasurer"],
+        img: "/assets/team/core/shreyansh.png",
+        intro: "Managing the club's finances and helping turn ideas into impactful initiatives.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 4
+      },
+      {
+        id: "c5",
+        name: "Rtr. Naman Dhoot",
+        roles: ["Seargent at Arms"],
+        img: "/assets/team/core/naman.png",
+        intro: "Supporting club operations while building meaningful partnerships for service.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 5
+      },
+      {
+        id: "c6",
+        name: "Rtr. Aparna Iyer",
+        roles: ["Training Revival and Sustenance"],
+        img: "/assets/team/core/aparna.png",
+        intro: "Helping members learn, grow and stay connected with the spirit of Rotaract.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 6
+      },
+      {
+        id: "c7",
+        name: "Rtr. Anagha Kulkarni",
+        roles: ["Immediate Past President"],
+        img: "/assets/team/core/anagha.png",
+        intro: "Supporting the new leadership team with experience, guidance and continuity.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 7
+      }
+    ],
+    board: [
+      {
+        id: "b1",
+        name: "Rtr. Sanchita Iyer",
+        roles: ["Club Service Director"],
+        img: "/assets/team/bod/sanchita.png",
+        intro: "Creating engaging experiences and strengthening the club's internal community.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 1
+      },
+      {
+        id: "b2",
+        name: "Rtr. Adarsh Shinde",
+        roles: ["Community Service Director"],
+        img: "/assets/team/bod/adarsh.png",
+        intro: "Leading initiatives that turn community needs into meaningful action.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 2
+      },
+      {
+        id: "b3",
+        name: "Rtr. Kaivalya Kasar",
+        roles: ["Career Development Director"],
+        img: "/assets/team/bod/kaivalya.png",
+        intro: "Creating opportunities that help members discover and develop their potential.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 3
+      },
+      {
+        id: "b4",
+        name: "Rtr. Vedant Pawar",
+        roles: ["International Service Director"],
+        img: "/assets/team/bod/vedant.png",
+        intro: "Building connections and opportunities that extend beyond our local community.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 4
+      },
+      {
+        id: "b5",
+        name: "Rtr. Kaushik Vinod",
+        roles: ["Sports Director"],
+        img: "/assets/team/bod/kaushik.png",
+        intro: "Bringing members together through sports, activities and healthy competition.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 5
+      },
+      {
+        id: "b6",
+        name: "Rtr. Diksha Kadam",
+        roles: ["Partners in Service"],
+        img: "/assets/team/bod/diksha.png",
+        intro: "Driving the club's growth while strengthening its presence and connection with the community.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 6
+      },
+      {
+        id: "b7",
+        name: "Rtr. Shreyansh Jaiswar",
+        roles: ["Digicom Director"],
+        img: "/assets/team/bod/shreyansh.png",
+        intro: "Managing the club's finances and helping turn ideas into impactful initiatives.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 7
+      },
+      {
+        id: "b8",
+        name: "Rtr. Naman Dhoot",
+        roles: ["Seargent at Arms", "PR and Marketing"],
+        img: "/assets/team/bod/naman.png",
+        intro: "Supporting club operations while building meaningful partnerships for service.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 8
+      },
+      {
+        id: "b9",
+        name: "Rtr. Anagha Kulkarni",
+        roles: ["Immediate Past President", "Editor"],
+        img: "/assets/team/bod/anagha.png",
+        intro: "Supporting the new leadership team with experience, guidance and continuity.",
+        social: { linkedin: "#", instagram: "#", email: "mailto:example@gmail.com" },
+        order: 9
+      }
+    ]
+  }
+};
+
+fs.writeFileSync(path.join(__dirname, 'data.json'), JSON.stringify(data, null, 2));
+
+// Also copy the files
+const publicAssets = path.join(__dirname, 'public', 'assets');
+const srcAssets = path.join(__dirname, 'src', 'assets');
+
+const dirs = [
+  path.join(publicAssets, 'projects'),
+  path.join(publicAssets, 'team', 'core'),
+  path.join(publicAssets, 'team', 'bod')
+];
+
+dirs.forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+});
+
+const projectsImages = ['charterday.jpg', 'azadikerang.jpeg', 'azadikeshabd.jpg', 'muskaan.jpeg', 'rotaractguru.jpg', 'installation.jpeg'];
+projectsImages.forEach(img => {
+  if (fs.existsSync(path.join(srcAssets, img))) {
+    fs.copyFileSync(path.join(srcAssets, img), path.join(publicAssets, 'projects', img));
+  }
+});
+
+const coreTeamImages = ['swayam.png', 'atharva.png', 'diksha.png', 'shreyansh.png', 'naman.png', 'aparna.png', 'anagha.png'];
+coreTeamImages.forEach(img => {
+  if (fs.existsSync(path.join(srcAssets, 'Core Team', img))) {
+    fs.copyFileSync(path.join(srcAssets, 'Core Team', img), path.join(publicAssets, 'team', 'core', img));
+  }
+});
+
+const bodTeamImages = ['sanchita.png', 'adarsh.png', 'kaivalya.png', 'vedant.png', 'kaushik.png', 'diksha.png', 'shreyansh.png', 'naman.png', 'anagha.png'];
+bodTeamImages.forEach(img => {
+  if (fs.existsSync(path.join(srcAssets, 'BOD', img))) {
+    fs.copyFileSync(path.join(srcAssets, 'BOD', img), path.join(publicAssets, 'team', 'bod', img));
+  }
+});
+
+console.log("Data generation complete.");
