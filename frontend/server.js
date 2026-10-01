@@ -29,7 +29,15 @@ function readData() {
 }
 
 function writeData(data) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  } catch (err) {
+    if (err.code === 'EROFS') {
+      console.warn("Vercel Read-Only File System detected. Changes will not be saved permanently.");
+    } else {
+      console.error("Failed to write data:", err);
+    }
+  }
 }
 
 // Auth Middleware
@@ -159,7 +167,11 @@ app.delete('/api/team/:section/:id', requireAuth, (req, res) => {
   res.json({ success: true });
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+export default app;
